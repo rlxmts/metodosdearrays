@@ -14,7 +14,11 @@ function exibirLivros(listaDeLivros){
             <span class="tag">${livro.categoria}</span>
             <p hidden>${livro.quantidade}</p>
             </div>
-        </div>
-        `
+        </div>        `
+        if(livro.quantidade <= 0){
+            let img = document.querySelector('.livro__imagens');
+            img.classList.add('indisponivel');
+        }
     });
+
 }
